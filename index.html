@@ -133,14 +133,7 @@
             <h1>Simple Image Gallery</h1>
             <p>SVG files and images with titles</p>
         </header>
-        
-        <div class="instructions">
-            <h3>How to Add Your Images:</h3>
-            <p>1. Place your image files (SVG, PNG, JPG) in the same folder as this HTML file</p>
-            <p>2. Copy one of the gallery items below and paste it inside the <code>&lt;div class="gallery"&gt;</code></p>
-            <p>3. Replace <code>"image.svg"</code> with your image filename</p>
-            <p>4. Replace <code>"Image Title"</code> with your desired title</p>
-        </div>
+    
         
         <div class="gallery">
             <!-- COPY THIS BLOCK TO ADD MORE IMAGES -->
@@ -158,7 +151,318 @@
                 <div class="item-title">Example SVG Image</div>
                 <div class="image-container">
                     <!-- Replace "example.svg" with your SVG file name -->
-                    <img src="example.svg" alt="Example SVG image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    
+    <linearGradient id="vercelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    
+    <linearGradient id="nextjsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0070f3"/>
+      <stop offset="100%" style="stop-color:#0050d0"/>
+    </linearGradient>
+    
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3776ab"/>
+      <stop offset="100%" style="stop-color:#ffd43b"/>
+    </linearGradient>
+    
+    <linearGradient id="railwayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0d0e"/>
+      <stop offset="100%" style="stop-color:#1c1f23"/>
+    </linearGradient>
+    
+    <linearGradient id="supabaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ecf8e"/>
+      <stop offset="100%" style="stop-color:#1a9f60"/>
+    </linearGradient>
+    
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    
+    <linearGradient id="hrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/>
+    </marker>
+    
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+    
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fb923c"/>
+    </marker>
+    
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="700" letter-spacing="1">
+    SYSTEM ARCHITECTURE
+  </text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="14" font-weight="400">
+    Intelligent Hiring Software — Three-Tier Architecture with Microservices
+  </text>
+  
+  <!-- TIER LABELS -->
+  <text x="60" y="150" fill="#64748b" font-size="12" font-weight="600" transform="rotate(-90, 60, 200)">PRESENTATION</text>
+  <text x="60" y="400" fill="#64748b" font-size="12" font-weight="600" transform="rotate(-90, 60, 450)">APPLICATION</text>
+  <text x="60" y="650" fill="#64748b" font-size="12" font-weight="600" transform="rotate(-90, 60, 700)">DATA</text>
+  
+  <!-- Tier separator lines -->
+  <line x1="100" y1="280" x2="1140" y2="280" stroke="#334155" stroke-width="1" stroke-dasharray="8,4"/>
+  <line x1="100" y1="530" x2="1140" y2="530" stroke="#334155" stroke-width="1" stroke-dasharray="8,4"/>
+  
+  <!-- ============ USER ICONS (Top Left) ============ -->
+  <!-- Jobseeker -->
+  <g transform="translate(140, 130)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="120" height="100" rx="12" fill="url(#userGrad)" opacity="0.9"/>
+    <circle cx="60" cy="35" r="18" fill="#fff" opacity="0.9"/>
+    <path d="M60 55 C35 55 30 75 30 85 L90 85 C90 75 85 55 60 55" fill="#fff" opacity="0.9"/>
+    <text x="60" y="98" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">JOBSEEKER</text>
+  </g>
+  
+  <!-- HR -->
+  <g transform="translate(140, 250)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="120" height="100" rx="12" fill="url(#hrGrad)" opacity="0.9"/>
+    <circle cx="60" cy="35" r="18" fill="#fff" opacity="0.9"/>
+    <path d="M60 55 C35 55 30 75 30 85 L90 85 C90 75 85 55 60 55" fill="#fff" opacity="0.9"/>
+    <rect x="75" y="20" width="20" height="15" rx="2" fill="#fff" opacity="0.7"/>
+    <text x="60" y="98" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">HR MANAGER</text>
+  </g>
+  
+  <!-- ============ PRESENTATION TIER ============ -->
+  <!-- Frontend Box (Vercel + Next.js) -->
+  <g transform="translate(350, 130)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="280" height="120" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+    
+    <!-- Vercel section -->
+    <rect x="10" y="10" width="125" height="100" rx="10" fill="url(#vercelGrad)"/>
+    <polygon points="72,35 92,65 52,65" fill="#fff"/>
+    <text x="72" y="85" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Vercel</text>
+    <text x="72" y="98" text-anchor="middle" fill="#888" font-size="9">Edge Network</text>
+    
+    <!-- Next.js section -->
+    <rect x="145" y="10" width="125" height="100" rx="10" fill="url(#nextjsGrad)"/>
+    <text x="207" y="45" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">N</text>
+    <text x="207" y="70" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Next.js</text>
+    <text x="207" y="85" text-anchor="middle" fill="#cce0ff" font-size="9">React + TypeScript</text>
+    <text x="207" y="98" text-anchor="middle" fill="#cce0ff" font-size="9">Tailwind CSS</text>
+  </g>
+  
+  <!-- Frontend label -->
+  <text x="490" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="500">
+    FRONTEND — Client-Side Rendering &amp; UI
+  </text>
+  
+  <!-- ============ APPLICATION TIER ============ -->
+  <!-- API Routes Box -->
+  <g transform="translate(300, 320)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="200" height="180" rx="16" fill="#0f172a" stroke="#0070f3" stroke-width="2"/>
+    <rect x="10" y="10" width="180" height="160" rx="10" fill="#0c1929"/>
+    
+    <text x="100" y="40" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="700">API Routes</text>
+    <text x="100" y="58" text-anchor="middle" fill="#64748b" font-size="10">Next.js Backend</text>
+    
+    <line x1="20" y1="70" x2="180" y2="70" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <text x="100" y="92" text-anchor="middle" fill="#94a3b8" font-size="10">• Authentication</text>
+    <text x="100" y="110" text-anchor="middle" fill="#94a3b8" font-size="10">• Job CRUD Operations</text>
+    <text x="100" y="128" text-anchor="middle" fill="#94a3b8" font-size="10">• Application Management</text>
+    <text x="100" y="146" text-anchor="middle" fill="#94a3b8" font-size="10">• File Upload Handling</text>
+    <text x="100" y="164" text-anchor="middle" fill="#94a3b8" font-size="10">• Request Validation</text>
+  </g>
+  
+  <!-- ML Service Box (Python + Railway) -->
+  <g transform="translate(700, 320)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="200" height="180" rx="16" fill="#0f172a" stroke="#ffd43b" stroke-width="2"/>
+    
+    <!-- Railway header -->
+    <rect x="0" y="0" width="200" height="45" rx="16" fill="url(#railwayGrad)"/>
+    <rect x="0" y="30" width="200" height="15" fill="url(#railwayGrad)"/>
+    <circle cx="30" cy="22" r="8" fill="#fff"/>
+    <text x="110" y="27" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Railway</text>
+    
+    <!-- Python section -->
+    <rect x="10" y="55" width="180" height="115" rx="10" fill="#1a365d"/>
+    
+    <!-- Python logo simplified -->
+    <circle cx="45" cy="85" r="12" fill="#3776ab"/>
+    <circle cx="55" cy="95" r="12" fill="#ffd43b"/>
+    <text x="120" y="82" text-anchor="middle" fill="#ffd43b" font-size="13" font-weight="700">Python</text>
+    <text x="120" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">Flask + ML</text>
+    
+    <line x1="20" y1="110" x2="180" y2="110" stroke="#2d4a6f" stroke-width="1"/>
+    
+    <text x="100" y="128" text-anchor="middle" fill="#94a3b8" font-size="10">• PDF Text Extraction</text>
+    <text x="100" y="144" text-anchor="middle" fill="#94a3b8" font-size="10">• TF-IDF Vectorization</text>
+    <text x="100" y="160" text-anchor="middle" fill="#94a3b8" font-size="10">• Category Prediction</text>
+  </g>
+  
+  <!-- Application tier labels -->
+  <text x="400" y="518" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="500">
+    BACKEND — Business Logic
+  </text>
+  <text x="800" y="518" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="500">
+    ML SERVICE — AI Analysis
+  </text>
+  
+  <!-- ============ DATA TIER ============ -->
+  <!-- Supabase Box -->
+  <g transform="translate(400, 570)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="400" height="160" rx="16" fill="#0f172a" stroke="#3ecf8e" stroke-width="2"/>
+    
+    <!-- Supabase header -->
+    <rect x="0" y="0" width="400" height="50" rx="16" fill="url(#supabaseGrad)"/>
+    <rect x="0" y="35" width="400" height="15" fill="url(#supabaseGrad)"/>
+    
+    <!-- Supabase logo (simplified) -->
+    <path d="M50 15 L65 35 L35 35 Z" fill="#fff"/>
+    <path d="M50 38 L35 18 L65 18 Z" fill="#fff" opacity="0.6"/>
+    <text x="200" y="32" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Supabase</text>
+    <text x="340" y="32" text-anchor="middle" fill="#fff" font-size="10" opacity="0.8">Backend-as-a-Service</text>
+    
+    <!-- Three sub-components -->
+    <!-- PostgreSQL -->
+    <rect x="15" y="60" width="115" height="85" rx="8" fill="#1a3d2e"/>
+    <text x="72" y="85" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="600">PostgreSQL</text>
+    <text x="72" y="102" text-anchor="middle" fill="#86efac" font-size="9">Database</text>
+    <text x="72" y="118" text-anchor="middle" fill="#64748b" font-size="8">• profiles</text>
+    <text x="72" y="130" text-anchor="middle" fill="#64748b" font-size="8">• jobs, applications</text>
+    <text x="72" y="142" text-anchor="middle" fill="#64748b" font-size="8">• resumes, skills</text>
+    
+    <!-- Auth -->
+    <rect x="142" y="60" width="115" height="85" rx="8" fill="#1a3d2e"/>
+    <text x="199" y="85" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="600">Auth</text>
+    <text x="199" y="102" text-anchor="middle" fill="#86efac" font-size="9">Authentication</text>
+    <text x="199" y="118" text-anchor="middle" fill="#64748b" font-size="8">• Email/Password</text>
+    <text x="199" y="130" text-anchor="middle" fill="#64748b" font-size="8">• Session Mgmt</text>
+    <text x="199" y="142" text-anchor="middle" fill="#64748b" font-size="8">• RLS Policies</text>
+    
+    <!-- Storage -->
+    <rect x="269" y="60" width="115" height="85" rx="8" fill="#1a3d2e"/>
+    <text x="326" y="85" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="600">Storage</text>
+    <text x="326" y="102" text-anchor="middle" fill="#86efac" font-size="9">File Storage</text>
+    <text x="326" y="118" text-anchor="middle" fill="#64748b" font-size="8">• Resume PDFs</text>
+    <text x="326" y="130" text-anchor="middle" fill="#64748b" font-size="8">• Signed URLs</text>
+    <text x="326" y="142" text-anchor="middle" fill="#64748b" font-size="8">• Bucket Policies</text>
+  </g>
+  
+  <!-- Data tier label -->
+  <text x="600" y="748" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="500">
+    DATA TIER — Managed Cloud Database &amp; Storage
+  </text>
+  
+  <!-- ============ DATA FLOW ARROWS ============ -->
+  
+  <!-- User to Frontend -->
+  <path d="M260 180 Q290 180 320 180 L340 180" stroke="#a78bfa" stroke-width="2.5" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M260 300 Q290 270 320 240 L340 220" stroke="#fb923c" stroke-width="2.5" fill="none" marker-end="url(#arrowOrange)"/>
+  
+  <!-- Frontend to API Routes -->
+  <path d="M490 250 L490 290 Q490 310 470 310 L420 310" stroke="#60a5fa" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="455" y="285" fill="#60a5fa" font-size="9" font-weight="500">HTTP</text>
+  
+  <!-- API Routes to ML Service -->
+  <path d="M500 410 L550 410 Q600 410 650 410 L690 410" stroke="#fb923c" stroke-width="2.5" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="595" y="400" fill="#fb923c" font-size="9" font-weight="500">REST API</text>
+  <text x="595" y="425" fill="#64748b" font-size="8">/analyze-resume</text>
+  
+  <!-- ML Service response back -->
+  <path d="M690 440 L550 440 Q520 440 510 440" stroke="#4ade80" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowGreen)"/>
+  <text x="595" y="458" fill="#4ade80" font-size="8">JSON Response</text>
+  
+  <!-- API Routes to Supabase -->
+  <path d="M400 500 L400 540 Q400 555 450 555 L500 555 L500 560" stroke="#4ade80" stroke-width="2.5" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="435" y="548" fill="#4ade80" font-size="9" font-weight="500">Supabase Client</text>
+  
+  <!-- ML Service to Storage (for PDF retrieval) -->
+  <path d="M800 500 L800 540 Q800 555 750 555 L700 555 L700 560" stroke="#60a5fa" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
+  <text x="760" y="548" fill="#60a5fa" font-size="8">PDF Fetch</text>
+  
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(950, 130)">
+    <rect x="0" y="0" width="180" height="140" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="90" y="25" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600">LEGEND</text>
+    <line x1="10" y1="35" x2="170" y2="35" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Data flow types -->
+    <line x1="20" y1="55" x2="60" y2="55" stroke="#60a5fa" stroke-width="2.5"/>
+    <text x="70" y="59" fill="#94a3b8" font-size="10">HTTP Request</text>
+    
+    <line x1="20" y1="80" x2="60" y2="80" stroke="#4ade80" stroke-width="2.5"/>
+    <text x="70" y="84" fill="#94a3b8" font-size="10">Database Query</text>
+    
+    <line x1="20" y1="105" x2="60" y2="105" stroke="#fb923c" stroke-width="2.5"/>
+    <text x="70" y="109" fill="#94a3b8" font-size="10">ML API Call</text>
+    
+    <line x1="20" y1="130" x2="60" y2="130" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="70" y="134" fill="#94a3b8" font-size="10">Response/Data</text>
+  </g>
+  
+  <!-- ============ AI METRICS OUTPUT BOX ============ -->
+  <g transform="translate(950, 400)" filter="url(#dropShadow)">
+    <rect x="0" y="0" width="180" height="100" rx="10" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#c4b5fd" font-size="11" font-weight="600">AI OUTPUT METRICS</text>
+    <line x1="10" y1="35" x2="170" y2="35" stroke="#3730a3" stroke-width="1"/>
+    
+    <text x="20" y="55" fill="#94a3b8" font-size="10">• ATS Score</text>
+    <text x="140" y="55" fill="#4ade80" font-size="10">0-100%</text>
+    
+    <text x="20" y="72" fill="#94a3b8" font-size="10">• Predicted Category</text>
+    <text x="140" y="72" fill="#60a5fa" font-size="10">String</text>
+    
+    <text x="20" y="89" fill="#94a3b8" font-size="10">• Confidence Score</text>
+    <text x="140" y="89" fill="#fbbf24" font-size="10">0-100%</text>
+  </g>
+  
+  <!-- Arrow from ML Service to AI Output -->
+  <path d="M900 410 L940 410" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  
+</svg>
+
                 </div>
             </div>
             
